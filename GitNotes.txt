@@ -1,0 +1,502 @@
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/dell/OneDrive/Desktop/Demo/.git/
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config]
+git: 'config]' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git branch
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ touch Simple.txt
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ vi Simple.txt
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ cat Simple.txt
+this is my first txt  file.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ls
+Simple.txt
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --global user.name
+sheringh
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --global user.name
+sheringh
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --local user.name
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=sheringh
+user.email=sk123.nitt@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config [--global] --replace-all user.name "SHERSINGH KUSHWAH"
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=sheringh
+user.email=sk123.nitt@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config [--global] --replace-all user.name "SHERSINGH KUSHWAH"
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ .GITCONFIG
+bash: .GITCONFIG: command not found
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ .girconfig
+bash: .girconfig: command not found
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ .gitconfig
+bash: .gitconfig: command not found
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ $ git config --global user.name "SHERSINGH"
+bash: $: command not found
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --global user.name "SHERSINGH"
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --global user.name
+SHERSINGH
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --global user.EMAIL
+sk123.nitt@gmail.com
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=SHERSINGH
+user.email=sk123.nitt@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add Simple.txt
+warning: LF will be replaced by CRLF in Simple.txt.
+The file will have its original line endings in your working directory
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ pwd
+/c/Users/dell/OneDrive/Desktop/Demo
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add simple.txt
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git commit -m "login page added"
+[master (root-commit) b9d9130] login page added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Simple.txt
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ touch signup.html
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ vi signup.html
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ cat signup.html
+<h1>this is my html file.</h1>
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add .
+warning: LF will be replaced by CRLF in signup.html.
+The file will have its original line endings in your working directory
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add .
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ^C
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ^C
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git remote add origin https://github.com/shersingh1997/Demo.git
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ^C
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push origin Demo
+error: src refspec Demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ^C
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git remote add origin https://github.com/shersingh1997/Demo.git
+error: remote origin already exists.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git remote add origin https://github.com/shersingh1997/Demo.git
+error: remote origin already exists.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin Demo
+error: src refspec Demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin Demo
+error: src refspec Demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ^C
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push origin master --force
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 248 bytes | 124.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shersingh1997/Demo.git
+ * [new branch]      master -> master
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin Demo
+error: src refspec Demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add .
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git commit -m "signup added"
+[master aeade51] signup added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 signup.html
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ ls
+Simple.txt  signup.html
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git remote add signup.html
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add .
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u origin signup.html
+error: src refspec signup.html does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push  origin signup.html
+error: src refspec signup.html does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git commit -m "signup added" signup.html
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u Demo
+fatal: 'Demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push -u demo
+fatal: 'demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push origin  demo
+error: src refspec demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push origin  Demo
+error: src refspec Demo does not match any
+error: failed to push some refs to 'https://github.com/shersingh1997/Demo.git'
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git add signup.html
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git commit -m "done"
+On branch master
+nothing to commit, working tree clean
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 105.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shersingh1997/Demo.git
+   b9d9130..aeade51  master -> master
+
+dell@DESKTOP-U87OD11 MINGW64 ~/OneDrive/Desktop/Demo (master)
+$
